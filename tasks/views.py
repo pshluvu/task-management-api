@@ -64,8 +64,7 @@ class TaskViewSet(viewsets.ModelViewSet):
         """
         if self.action in [
             'retrieve', 'update', 'partial_update', 'destroy',
-            'mark-complete', 'mark-incomplete'
-        ]:
+            'mark-complete', 'mark-incomplete']:
             return [IsAuthenticated(), IsOwner()]
         return [IsAuthenticated()]
 
